@@ -13,16 +13,33 @@
 class StepperMotor  : public Module {
     public:
         StepperMotor(Pin& step, Pin& dir, Pin& en);
+        // slave motor pins present
+        StepperMotor(Pin& step, Pin& dir, Pin& en, Pin& slave_step, Pin& slave_dir, Pin& slave_en);
         ~StepperMotor();
 
         // called from step ticker ISR
-        inline bool step() { step_pin.set(1); current_position_steps += (direction?-1:1); return moving; }
+        inline bool step() {
+        	step_pin.set(1);
+        	if(has_slave) slave_step_pin.set(1);
+        	current_position_steps += (direction?-1:1);
+        	return moving;
+        }
         // called from unstep ISR
-        inline void unstep() { step_pin.set(0); }
+        inline void unstep() {
+        	step_pin.set(0);
+        	if(has_slave) slave_step_pin.set(0);
+        }
         // called from step ticker ISR
-        inline void set_direction(bool f) { dir_pin.set(f); direction= f; }
+        inline void set_direction(bool f) {
+        	dir_pin.set(f);
+        	if(has_slave) slave_dir_pin.set(f);
+        	direction= f;
+        }
 
-        inline void enable(bool state) { en_pin.set(!state); };
+        inline void enable(bool state) {
+        	en_pin.set(!state);
+        	if(has_slave) slave_en_pin.set(state);
+        };
         inline bool is_enabled() const { return !en_pin.get(); };
         inline bool is_moving() const { return moving; };
         void start_moving() { moving= true; }
@@ -61,6 +78,11 @@ class StepperMotor  : public Module {
         Pin step_pin;
         Pin dir_pin;
         Pin en_pin;
+
+        bool has_slave;
+        Pin slave_step_pin;
+        Pin slave_dir_pin;
+        Pin slave_en_pin;
 
         float steps_per_second;
         float steps_per_mm;

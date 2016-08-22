@@ -13,7 +13,7 @@
 #include <math.h>
 #include "mbed.h"
 
-StepperMotor::StepperMotor(Pin &step, Pin &dir, Pin &en) : step_pin(step), dir_pin(dir), en_pin(en)
+StepperMotor::StepperMotor(Pin &step, Pin &dir, Pin &en) : step_pin(step), dir_pin(dir), en_pin(en), has_slave(false)
 {
     set_high_on_debug(en.port_number, en.pin);
 
@@ -33,6 +33,14 @@ StepperMotor::StepperMotor(Pin &step, Pin &dir, Pin &en) : step_pin(step), dir_p
 
     this->register_for_event(ON_HALT);
     this->register_for_event(ON_ENABLE);
+}
+
+StepperMotor::StepperMotor(Pin &step, Pin &dir, Pin &en, Pin& slave_step, Pin& slave_dir, Pin& slave_en) : StepperMotor(step, dir, en),
+        slave_step_pin(slave_step),
+		slave_dir_pin(slave_dir),
+		slave_en_pin(slave_en),
+		has_slave(true)
+{
 }
 
 StepperMotor::~StepperMotor()

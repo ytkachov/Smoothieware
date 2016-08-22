@@ -9,6 +9,9 @@ mri.log
 gdb.txt
 deploy
 debug
+.cproject
+.project
+/.settings
 /mbed/src/Debug/
 /mbed/src/Release/
 /LPC1768/
