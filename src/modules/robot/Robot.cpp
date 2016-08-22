@@ -128,7 +128,11 @@ void Robot::on_module_loaded()
     CHECKSUM(X "_en_pin"),          \
     CHECKSUM(X "_steps_per_mm"),    \
     CHECKSUM(X "_max_rate"),        \
-    CHECKSUM(X "_acceleration")     \
+    CHECKSUM(X "_acceleration"),    \
+    CHECKSUM(X "_has_slave"),  		\
+    CHECKSUM(X "_slave_step_pin"),  \
+    CHECKSUM(X "_slave_dir_pin"),   \
+    CHECKSUM(X "_slave_en_pin")     \
 }
 
 void Robot::load_config()
@@ -185,7 +189,7 @@ void Robot::load_config()
     this->s_value             = THEKERNEL->config->value(laser_module_default_power_checksum)->by_default(0.8F)->as_number();
 
     // Make our Primary XYZ StepperMotors
-    uint16_t const checksums[][6] = {
+    uint16_t const checksums[][10] = {
         ACTUATOR_CHECKSUMS("alpha"), // X
         ACTUATOR_CHECKSUMS("beta"),  // Y
         ACTUATOR_CHECKSUMS("gamma"), // Z
@@ -200,7 +204,18 @@ void Robot::load_config()
         for (size_t i = 0; i < 3; i++) {
             pins[i].from_string(THEKERNEL->config->value(checksums[a][i])->by_default("nc")->as_string())->as_output();
         }
-        StepperMotor *sm = new StepperMotor(pins[0], pins[1], pins[2]);
+
+        StepperMotor *sm;
+        if(!THEKERNEL->config->value(checksums[a][6])->by_default(false)->as_bool())
+        	sm = new StepperMotor(pins[0], pins[1], pins[2]);
+        else {
+        	// motor has slave
+            Pin slavepins[3]; //step, dir, enable
+            for (size_t i = 0; i < 3; i++) {
+                slavepins[i].from_string(THEKERNEL->config->value(checksums[a][7 + i])->by_default("nc")->as_string())->as_output();
+            }
+        	sm = new StepperMotor(pins[0], pins[1], pins[2], slavepins[0], slavepins[1], slavepins[2]);
+        }
         // register this motor (NB This must be 0,1,2) of the actuators array
         uint8_t n= register_motor(sm);
         if(n != a) {
