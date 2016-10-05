@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\generate-version.bat" />
+    <None Include="src\makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\version.cpp" />
+    <ClCompile Include="src\libs\Adc.cpp" />
+    <ClCompile Include="src\libs\ahbmalloc.cpp" />
+    <ClCompile Include="src\libs\AppendFileStream.cpp" />
+    <ClCompile Include="src\libs\Config.cpp" />
+    <ClCompile Include="src\libs\ConfigCache.cpp" />
+    <ClCompile Include="src\libs\ConfigSource.cpp" />
+    <ClCompile Include="src\libs\ConfigValue.cpp" />
+    <ClCompile Include="src\libs\gpio.cpp" />
+    <ClCompile Include="src\libs\HeapRing.cpp" />
+    <ClCompile Include="src\libs\Hook.cpp" />
+    <ClCompile Include="src\libs\Kernel.cpp" />
+    <ClCompile Include="src\libs\md5.cpp" />
+    <ClCompile Include="src\libs\MemoryPool.cpp" />
+    <ClCompile Include="src\libs\Module.cpp" />
+    <ClCompile Include="src\libs\MRI_Hooks.cpp" />
+    <ClCompile Include="src\libs\Pin.cpp" />
+    <ClCompile Include="src\libs\platform_memory.cpp" />
+    <ClCompile Include="src\libs\PublicData.cpp" />
+    <ClCompile Include="src\libs\Pwm.cpp" />
+    <ClCompile Include="src\libs\SDFAT.cpp" />
+    <ClCompile Include="src\libs\SlowTicker.cpp" />
+    <ClCompile Include="src\libs\spi.cpp" />
+    <ClCompile Include="src\libs\StepperMotor.cpp" />
+    <ClCompile Include="src\libs\StepTicker.cpp" />
+    <ClCompile Include="src\libs\StreamOutput.cpp" />
+    <ClCompile Include="src\libs\utils.cpp" />
+    <ClCompile Include="src\libs\Vector3.cpp" />
+    <ClCompile Include="src\libs\Watchdog.cpp" />
+    <ClCompile Include="src\libs\ADC\adc.cpp" />
+    <ClCompile Include="src\libs\ChaNFS\FATDirHandle.cpp" />
+    <ClCompile Include="src\libs\ChaNFS\FATFileHandle.cpp" />
+    <ClCompile Include="src\libs\ChaNFS\FATFileSystem.cpp" />
+    <ClCompile Include="src\libs\ChaNFS\CHAN_FS\diskio.cpp" />
+    <ClCompile Include="src\libs\ChaNFS\CHAN_FS\ff.cpp" />
+    <ClCompile Include="src\libs\ConfigSources\FileConfigSource.cpp" />
+    <ClCompile Include="src\libs\ConfigSources\FirmConfigSource.cpp" />
+    <ClCompile Include="src\libs\Network\net_util.cpp" />
+    <ClCompile Include="src\libs\Network\Drivers\LPC17XX_Ethernet.cpp" />
+    <ClCompile Include="src\libs\Network\uip\CallbackStream.cpp" />
+    <ClCompile Include="src\libs\Network\uip\CommandQueue.cpp" />
+    <ClCompile Include="src\libs\Network\uip\fifo.cpp" />
+    <ClCompile Include="src\libs\Network\uip\Network.cpp" />
+    <ClCompile Include="src\libs\Network\uip\plan9\plan9.cpp" />
+    <ClCompile Include="src\libs\Network\uip\sftp\sftpd.cpp" />
+    <ClCompile Include="src\libs\Network\uip\telnetd\shell.cpp" />
+    <ClCompile Include="src\libs\Network\uip\telnetd\telnetd.cpp" />
+    <ClCompile Include="src\libs\USBDevice\DFU.cpp" />
+    <ClCompile Include="src\libs\USBDevice\USB.cpp" />
+    <ClCompile Include="src\libs\USBDevice\USBDevice\USBDevice.cpp" />
+    <ClCompile Include="src\libs\USBDevice\USBDevice\USBHAL_LPC11U.cpp" />
+    <ClCompile Include="src\libs\USBDevice\USBDevice\USBHAL_LPC17.cpp" />
+    <ClCompile Include="src\libs\USBDevice\USBMSD\SDCard.cpp" />
+    <ClCompile Include="src\libs\USBDevice\USBMSD\USBMSD.cpp" />
+    <ClCompile Include="src\libs\USBDevice\USBSerial\USBCDC.cpp" />
+    <ClCompile Include="src\libs\USBDevice\USBSerial\USBSerial.cpp" />
+    <ClCompile Include="src\modules\communication\GcodeDispatch.cpp" />
+    <ClCompile Include="src\modules\communication\SerialConsole.cpp" />
+    <ClCompile Include="src\modules\communication\utils\Gcode.cpp" />
+    <ClCompile Include="src\modules\robot\Block.cpp" />
+    <ClCompile Include="src\modules\robot\Conveyor.cpp" />
+    <ClCompile Include="src\modules\robot\Planner.cpp" />
+    <ClCompile Include="src\modules\robot\Robot.cpp" />
+    <ClCompile Include="src\modules\robot\arm_solutions\CartesianSolution.cpp" />
+    <ClCompile Include="src\modules\robot\arm_solutions\CoreXZSolution.cpp" />
+    <ClCompile Include="src\modules\robot\arm_solutions\ExperimentalDeltaSolution.cpp" />
+    <ClCompile Include="src\modules\robot\arm_solutions\HBotSolution.cpp" />
+    <ClCompile Include="src\modules\robot\arm_solutions\LinearDeltaSolution.cpp" />
+    <ClCompile Include="src\modules\robot\arm_solutions\MorganSCARASolution.cpp" />
+    <ClCompile Include="src\modules\robot\arm_solutions\RotaryDeltaSolution.cpp" />
+    <ClCompile Include="src\modules\robot\arm_solutions\RotatableCartesianSolution.cpp" />
+    <ClCompile Include="src\modules\tools\drillingcycles\Drillingcycles.cpp" />
+    <ClCompile Include="src\modules\tools\endstops\Endstops.cpp" />
+    <ClCompile Include="src\modules\tools\extruder\Extruder.cpp" />
+    <ClCompile Include="src\modules\tools\extruder\ExtruderMaker.cpp" />
+    <ClCompile Include="src\modules\tools\filamentdetector\FilamentDetector.cpp" />
+    <ClCompile Include="src\modules\tools\laser\Laser.cpp" />
+    <ClCompile Include="src\modules\tools\rotarydeltacalibration\RotaryDeltaCalibration.cpp" />
+    <ClCompile Include="src\modules\tools\scaracal\SCARAcal.cpp" />
+    <ClCompile Include="src\modules\tools\spindle\Spindle.cpp" />
+    <ClCompile Include="src\modules\tools\switch\Switch.cpp" />
+    <ClCompile Include="src\modules\tools\switch\SwitchPool.cpp" />
+    <ClCompile Include="src\modules\tools\temperaturecontrol\AD8495.cpp" />
+    <ClCompile Include="src\modules\tools\temperaturecontrol\max31855.cpp" />
+    <ClCompile Include="src\modules\tools\temperaturecontrol\PID_Autotuner.cpp" />
+    <ClCompile Include="src\modules\tools\temperaturecontrol\TemperatureControl.cpp" />
+    <ClCompile Include="src\modules\tools\temperaturecontrol\TemperatureControlPool.cpp" />
+    <ClCompile Include="src\modules\tools\temperaturecontrol\Thermistor.cpp" />
+    <ClCompile Include="src\modules\tools\temperatureswitch\TemperatureSwitch.cpp" />
+    <ClCompile Include="src\modules\tools\toolmanager\ToolManager.cpp" />
+    <ClCompile Include="src\modules\tools\zprobe\DeltaCalibrationStrategy.cpp" />
+    <ClCompile Include="src\modules\tools\zprobe\DeltaGridStrategy.cpp" />
+    <ClCompile Include="src\modules\tools\zprobe\Plane3D.cpp" />
+    <ClCompile Include="src\modules\tools\zprobe\ThreePointStrategy.cpp" />
+    <ClCompile Include="src\modules\tools\zprobe\ZGridStrategy.cpp" />
+    <ClCompile Include="src\modules\tools\zprobe\ZProbe.cpp" />
+    <ClCompile Include="src\modules\utils\configurator\Configurator.cpp" />
+    <ClCompile Include="src\modules\utils\currentcontrol\CurrentControl.cpp" />
+    <ClCompile Include="src\modules\utils\killbutton\KillButton.cpp" />
+    <ClCompile Include="src\modules\utils\motordrivercontrol\MotorDriverControl.cpp" />
+    <ClCompile Include="src\modules\utils\motordrivercontrol\drivers\DRV8711\drv8711.cpp" />
+    <ClCompile Include="src\modules\utils\motordrivercontrol\drivers\TMC26X\TMC26X.cpp" />
+    <ClCompile Include="src\modules\utils\panel\Button.cpp" />
+    <ClCompile Include="src\modules\utils\panel\Panel.cpp" />
+    <ClCompile Include="src\modules\utils\panel\PanelScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\panels\LcdBase.cpp" />
+    <ClCompile Include="src\modules\utils\panel\panels\ReprapDiscountGLCD.cpp" />
+    <ClCompile Include="src\modules\utils\panel\panels\ST7565.cpp" />
+    <ClCompile Include="src\modules\utils\panel\panels\UniversalAdapter.cpp" />
+    <ClCompile Include="src\modules\utils\panel\panels\rrdglcd\RrdGlcd.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\CustomScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\FileScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\ModifyValuesScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\ControlScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\ExtruderScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\JogScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\MainMenuScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\PrepareScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\ProbeScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\WatchScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\ControlScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\DirectJogScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\JogScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\MainMenuScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\PrepareScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\ProbeScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\WatchScreen.cpp" />
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\WCSScreen.cpp" />
+    <ClCompile Include="src\modules\utils\player\Player.cpp" />
+    <ClCompile Include="src\modules\utils\PlayLed\PlayLed.cpp" />
+    <ClCompile Include="src\modules\utils\simpleshell\SimpleShell.cpp" />
+    <ClCompile Include="src\testframework\Test_kernel.cpp" />
+    <ClCompile Include="src\testframework\Test_main.cpp" />
+    <ClCompile Include="src\testframework\easyunit\defaulttestprinter.cpp" />
+    <ClCompile Include="src\testframework\easyunit\simplestring.cpp" />
+    <ClCompile Include="src\testframework\easyunit\test.cpp" />
+    <ClCompile Include="src\testframework\easyunit\testcase.cpp" />
+    <ClCompile Include="src\testframework\easyunit\testpartresult.cpp" />
+    <ClCompile Include="src\testframework\easyunit\testregistry.cpp" />
+    <ClCompile Include="src\testframework\easyunit\testresult.cpp" />
+    <ClCompile Include="src\testframework\easyunit\testrunner.cpp" />
+    <ClCompile Include="src\testframework\unittests\libs\TEST_gcode.cpp" />
+    <ClCompile Include="src\testframework\unittests\libs\TEST_utils.cpp" />
+    <ClCompile Include="src\testframework\unittests\tools\switch\TEST_Switch.cpp" />
+    <ClCompile Include="src\testframework\unittests\tools\temperatureswitch\TEST_TemperatureSwitch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\version.h" />
+    <ClInclude Include="src\libs\Adc.h" />
+    <ClInclude Include="src\libs\ahbmalloc.h" />
+    <ClInclude Include="src\libs\AppendFileStream.h" />
+    <ClInclude Include="src\libs\checksumm.h" />
+    <ClInclude Include="src\libs\Config.h" />
+    <ClInclude Include="src\libs\ConfigCache.h" />
+    <ClInclude Include="src\libs\ConfigSource.h" />
+    <ClInclude Include="src\libs\ConfigValue.h" />
+    <ClInclude Include="src\libs\FileStream.h" />
+    <ClInclude Include="src\libs\FPointer.h" />
+    <ClInclude Include="src\libs\gpio.h" />
+    <ClInclude Include="src\libs\HeapRing.h" />
+    <ClInclude Include="src\libs\Hook.h" />
+    <ClInclude Include="src\libs\Kernel.h" />
+    <ClInclude Include="src\libs\md5.h" />
+    <ClInclude Include="src\libs\Median.h" />
+    <ClInclude Include="src\libs\MemoryPool.h" />
+    <ClInclude Include="src\libs\Module.h" />
+    <ClInclude Include="src\libs\MRI_Hooks.h" />
+    <ClInclude Include="src\libs\nuts_bolts.h" />
+    <ClInclude Include="src\libs\Pin.h" />
+    <ClInclude Include="src\libs\platform_memory.h" />
+    <ClInclude Include="src\libs\PublicData.h" />
+    <ClInclude Include="src\libs\PublicDataRequest.h" />
+    <ClInclude Include="src\libs\Pwm.h" />
+    <ClInclude Include="src\libs\RingBuffer.h" />
+    <ClInclude Include="src\libs\SDFAT.h" />
+    <ClInclude Include="src\libs\SerialMessage.h" />
+    <ClInclude Include="src\libs\SlowTicker.h" />
+    <ClInclude Include="src\libs\spi.h" />
+    <ClInclude Include="src\libs\spi_hal.h" />
+    <ClInclude Include="src\libs\StepperMotor.h" />
+    <ClInclude Include="src\libs\StepTicker.h" />
+    <ClInclude Include="src\libs\StreamOutput.h" />
+    <ClInclude Include="src\libs\StreamOutputPool.h" />
+    <ClInclude Include="src\libs\StringStream.h" />
+    <ClInclude Include="src\libs\TSRingBuffer.h" />
+    <ClInclude Include="src\libs\utils.h" />
+    <ClInclude Include="src\libs\Vector3.h" />
+    <ClInclude Include="src\libs\Watchdog.h" />
+    <ClInclude Include="src\libs\ADC\adc.h" />
+    <ClInclude Include="src\libs\ChaNFS\FATDirHandle.h" />
+    <ClInclude Include="src\libs\ChaNFS\FATFileHandle.h" />
+    <ClInclude Include="src\libs\ChaNFS\FATFileSystem.h" />
+    <ClInclude Include="src\libs\ChaNFS\CHAN_FS\diskio.h" />
+    <ClInclude Include="src\libs\ChaNFS\CHAN_FS\ff.h" />
+    <ClInclude Include="src\libs\ChaNFS\CHAN_FS\ffconf.h" />
+    <ClInclude Include="src\libs\ChaNFS\CHAN_FS\integer.h" />
+    <ClInclude Include="src\libs\ConfigSources\FileConfigSource.h" />
+    <ClInclude Include="src\libs\ConfigSources\FirmConfigSource.h" />
+    <ClInclude Include="src\libs\LPC17xx\score_cm3.h" />
+    <ClInclude Include="src\libs\LPC17xx\sLPC17xx.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\debug_frmwrk.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_adc.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_can.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_clkpwr.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_dac.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_emac.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_exti.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_gpdma.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_gpio.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_i2c.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_i2s.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_libcfg_default.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_mcpwm.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_nvic.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_pinsel.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_pwm.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_qei.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_rit.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_rtc.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_spi.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_ssp.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_systick.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_timer.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_uart.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_wdt.h" />
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc_types.h" />
+    <ClInclude Include="src\libs\Network\net_util.h" />
+    <ClInclude Include="src\libs\Network\Drivers\LPC17XX_Ethernet.h" />
+    <ClInclude Include="src\libs\Network\uip\c-fifo.h" />
+    <ClInclude Include="src\libs\Network\uip\CallbackStream.h" />
+    <ClInclude Include="src\libs\Network\uip\clock-arch.h" />
+    <ClInclude Include="src\libs\Network\uip\CommandQueue.h" />
+    <ClInclude Include="src\libs\Network\uip\fifo.h" />
+    <ClInclude Include="src\libs\Network\uip\Network.h" />
+    <ClInclude Include="src\libs\Network\uip\NetworkPublicAccess.h" />
+    <ClInclude Include="src\libs\Network\uip\uip-conf.h" />
+    <ClInclude Include="src\libs\Network\uip\dhcpc\dhcpc.h" />
+    <ClInclude Include="src\libs\Network\uip\lib\memb.h" />
+    <ClInclude Include="src\libs\Network\uip\plan9\plan9.h" />
+    <ClInclude Include="src\libs\Network\uip\sftp\sftpd.h" />
+    <ClInclude Include="src\libs\Network\uip\telnetd\shell.h" />
+    <ClInclude Include="src\libs\Network\uip\telnetd\telnetd.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\clock.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\lc-addrlabels.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\lc-switch.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\lc.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\psock.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\pt.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\timer.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\uip-fw.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\uip-neighbor.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\uip-split.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\uip.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\uiplib.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\uipopt.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\uip_arch.h" />
+    <ClInclude Include="src\libs\Network\uip\uip\uip_arp.h" />
+    <ClInclude Include="src\libs\Network\uip\webserver\http-strings.h" />
+    <ClInclude Include="src\libs\Network\uip\webserver\httpd-fs.h" />
+    <ClInclude Include="src\libs\Network\uip\webserver\httpd-fsdata.h" />
+    <ClInclude Include="src\libs\Network\uip\webserver\httpd-fsdata2.h" />
+    <ClInclude Include="src\libs\Network\uip\webserver\httpd.h" />
+    <ClInclude Include="src\libs\Network\uip\webserver\webserver.h" />
+    <ClInclude Include="src\libs\USBDevice\descriptor.h" />
+    <ClInclude Include="src\libs\USBDevice\descriptor_cdc.h" />
+    <ClInclude Include="src\libs\USBDevice\descriptor_msc.h" />
+    <ClInclude Include="src\libs\USBDevice\DFU.h" />
+    <ClInclude Include="src\libs\USBDevice\USB.h" />
+    <ClInclude Include="src\libs\USBDevice\USBDevice\debug.h" />
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBDescriptor.h" />
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBDevice.h" />
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBDevice_Types.h" />
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBEndpoints.h" />
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBEndpoints_LPC11U.h" />
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBEndpoints_LPC17_LPC23.h" />
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBHAL.h" />
+    <ClInclude Include="src\libs\USBDevice\USBMSD\disk.h" />
+    <ClInclude Include="src\libs\USBDevice\USBMSD\SDCard.h" />
+    <ClInclude Include="src\libs\USBDevice\USBMSD\USBMSD.h" />
+    <ClInclude Include="src\libs\USBDevice\USBSerial\CircBuffer.h" />
+    <ClInclude Include="src\libs\USBDevice\USBSerial\USBCDC.h" />
+    <ClInclude Include="src\libs\USBDevice\USBSerial\USBSerial.h" />
+    <ClInclude Include="src\modules\communication\GcodeDispatch.h" />
+    <ClInclude Include="src\modules\communication\SerialConsole.h" />
+    <ClInclude Include="src\modules\communication\utils\Gcode.h" />
+    <ClInclude Include="src\modules\robot\ActuatorCoordinates.h" />
+    <ClInclude Include="src\modules\robot\Block.h" />
+    <ClInclude Include="src\modules\robot\Conveyor.h" />
+    <ClInclude Include="src\modules\robot\Planner.h" />
+    <ClInclude Include="src\modules\robot\Robot.h" />
+    <ClInclude Include="src\modules\robot\arm_solutions\BaseSolution.h" />
+    <ClInclude Include="src\modules\robot\arm_solutions\CartesianSolution.h" />
+    <ClInclude Include="src\modules\robot\arm_solutions\CoreXZSolution.h" />
+    <ClInclude Include="src\modules\robot\arm_solutions\ExperimentalDeltaSolution.h" />
+    <ClInclude Include="src\modules\robot\arm_solutions\HBotSolution.h" />
+    <ClInclude Include="src\modules\robot\arm_solutions\LinearDeltaSolution.h" />
+    <ClInclude Include="src\modules\robot\arm_solutions\MorganSCARASolution.h" />
+    <ClInclude Include="src\modules\robot\arm_solutions\RotaryDeltaSolution.h" />
+    <ClInclude Include="src\modules\robot\arm_solutions\RotatableCartesianSolution.h" />
+    <ClInclude Include="src\modules\tools\drillingcycles\Drillingcycles.h" />
+    <ClInclude Include="src\modules\tools\endstops\Endstops.h" />
+    <ClInclude Include="src\modules\tools\endstops\EndstopsPublicAccess.h" />
+    <ClInclude Include="src\modules\tools\extruder\Extruder.h" />
+    <ClInclude Include="src\modules\tools\extruder\ExtruderMaker.h" />
+    <ClInclude Include="src\modules\tools\extruder\ExtruderPublicAccess.h" />
+    <ClInclude Include="src\modules\tools\filamentdetector\FilamentDetector.h" />
+    <ClInclude Include="src\modules\tools\laser\Laser.h" />
+    <ClInclude Include="src\modules\tools\rotarydeltacalibration\RotaryDeltaCalibration.h" />
+    <ClInclude Include="src\modules\tools\scaracal\SCARAcal.h" />
+    <ClInclude Include="src\modules\tools\spindle\Spindle.h" />
+    <ClInclude Include="src\modules\tools\switch\Switch.h" />
+    <ClInclude Include="src\modules\tools\switch\SwitchPool.h" />
+    <ClInclude Include="src\modules\tools\switch\SwitchPublicAccess.h" />
+    <ClInclude Include="src\modules\tools\temperaturecontrol\AD8495.h" />
+    <ClInclude Include="src\modules\tools\temperaturecontrol\max31855.h" />
+    <ClInclude Include="src\modules\tools\temperaturecontrol\PID_Autotuner.h" />
+    <ClInclude Include="src\modules\tools\temperaturecontrol\predefined_thermistors.h" />
+    <ClInclude Include="src\modules\tools\temperaturecontrol\TemperatureControl.h" />
+    <ClInclude Include="src\modules\tools\temperaturecontrol\TemperatureControlPool.h" />
+    <ClInclude Include="src\modules\tools\temperaturecontrol\TemperatureControlPublicAccess.h" />
+    <ClInclude Include="src\modules\tools\temperaturecontrol\TempSensor.h" />
+    <ClInclude Include="src\modules\tools\temperaturecontrol\Thermistor.h" />
+    <ClInclude Include="src\modules\tools\temperatureswitch\TemperatureSwitch.h" />
+    <ClInclude Include="src\modules\tools\toolmanager\Tool.h" />
+    <ClInclude Include="src\modules\tools\toolmanager\ToolManager.h" />
+    <ClInclude Include="src\modules\tools\toolmanager\ToolManagerPublicAccess.h" />
+    <ClInclude Include="src\modules\tools\zprobe\DeltaCalibrationStrategy.h" />
+    <ClInclude Include="src\modules\tools\zprobe\DeltaGridStrategy.h" />
+    <ClInclude Include="src\modules\tools\zprobe\LevelingStrategy.h" />
+    <ClInclude Include="src\modules\tools\zprobe\Plane3D.h" />
+    <ClInclude Include="src\modules\tools\zprobe\ThreePointStrategy.h" />
+    <ClInclude Include="src\modules\tools\zprobe\ZGridStrategy.h" />
+    <ClInclude Include="src\modules\tools\zprobe\ZProbe.h" />
+    <ClInclude Include="src\modules\utils\configurator\Configurator.h" />
+    <ClInclude Include="src\modules\utils\currentcontrol\ad5206.h" />
+    <ClInclude Include="src\modules\utils\currentcontrol\CurrentControl.h" />
+    <ClInclude Include="src\modules\utils\currentcontrol\DigipotBase.h" />
+    <ClInclude Include="src\modules\utils\currentcontrol\mcp4451.h" />
+    <ClInclude Include="src\modules\utils\killbutton\KillButton.h" />
+    <ClInclude Include="src\modules\utils\motordrivercontrol\MotorDriverControl.h" />
+    <ClInclude Include="src\modules\utils\motordrivercontrol\drivers\DRV8711\drv8711.h" />
+    <ClInclude Include="src\modules\utils\motordrivercontrol\drivers\TMC26X\TMC26X.h" />
+    <ClInclude Include="src\modules\utils\panel\Button.h" />
+    <ClInclude Include="src\modules\utils\panel\Panel.h" />
+    <ClInclude Include="src\modules\utils\panel\PanelScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\panels\LcdBase.h" />
+    <ClInclude Include="src\modules\utils\panel\panels\ReprapDiscountGLCD.h" />
+    <ClInclude Include="src\modules\utils\panel\panels\ST7565.h" />
+    <ClInclude Include="src\modules\utils\panel\panels\UniversalAdapter.h" />
+    <ClInclude Include="src\modules\utils\panel\panels\rrdglcd\RrdGlcd.h" />
+    <ClInclude Include="src\modules\utils\panel\panels\ST7565\glcdfont.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\CustomScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\FileScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\ModifyValuesScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\ControlScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\ExtruderScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\JogScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\MainMenuScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\PrepareScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\ProbeScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\WatchScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\ControlScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\DirectJogScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\JogScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\MainMenuScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\PrepareScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\ProbeScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\WatchScreen.h" />
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\WCSScreen.h" />
+    <ClInclude Include="src\modules\utils\player\Player.h" />
+    <ClInclude Include="src\modules\utils\player\PlayerPublicAccess.h" />
+    <ClInclude Include="src\modules\utils\PlayLed\PlayLed.h" />
+    <ClInclude Include="src\modules\utils\simpleshell\SimpleShell.h" />
+    <ClInclude Include="src\testframework\Test_kernel.h" />
+    <ClInclude Include="src\testframework\easyunit\defaulttestprinter.h" />
+    <ClInclude Include="src\testframework\easyunit\simplestring.h" />
+    <ClInclude Include="src\testframework\easyunit\test.h" />
+    <ClInclude Include="src\testframework\easyunit\testcase.h" />
+    <ClInclude Include="src\testframework\easyunit\testharness.h" />
+    <ClInclude Include="src\testframework\easyunit\testpartresult.h" />
+    <ClInclude Include="src\testframework\easyunit\testprinter.h" />
+    <ClInclude Include="src\testframework\easyunit\testregistry.h" />
+    <ClInclude Include="src\testframework\easyunit\testresult.h" />
+    <ClInclude Include="src\testframework\easyunit\testrunner.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{279CDC9A-F95D-4EA7-934D-8D86C78D8D71}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>vsmake.cmd all</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>vsmake.cmd clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>vsmake.cmd clean all</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>__STDC__;WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <IncludePath>gcc-arm-none-eabi\arm-none-eabi\include;src;src\libs;src\modules\robot;src\modules\robot\arm_solutions;src\modules\tools\rotarydeltacalibration;src\modules\tools\filamentdetector;src\modules\tools\toolmanager;src\modules\utils\motordrivercontrol;mbed\drop;mbed\drop\LPC1768</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DefineConstants>__STDC__;_HAVE_STDC</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>vsmake.cmd all</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>vsmake.cmd clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>vsmake.cmd clean all</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

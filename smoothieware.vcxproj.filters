@@ -1,0 +1,1379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{bd400b0a-dce5-482c-9fbc-f719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\testframework">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\ADC">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\ChaNFS">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\ConfigSources">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\LPC17xx">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\Network">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\USBDevice">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\ChaNFS\CHAN_FS">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\ChaNFS\CHAN_FS\option">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\LPC17xx\LPC17xxLib">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\LPC17xx\LPC17xxLib\inc">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\LPC17xx\LPC17xxLib\src">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\Network\Drivers">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\Network\uip">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\Network\uip\dhcpc">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\Network\uip\lib">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\Network\uip\plan9">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\Network\uip\sftp">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\Network\uip\telnetd">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\Network\uip\uip">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\Network\uip\webserver">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\Network\uip\webserver\httpd-fs">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\Network\uip\webserver\httpd-fs-src">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9b9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\USBDevice\USBDevice">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9baf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\USBDevice\USBMSD">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9bbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libs\USBDevice\USBSerial">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9bcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\communication">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9bdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\robot">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9bef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9bff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e906f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\communication\utils">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e916f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\robot\arm_solutions">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e926f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools\drillingcycles">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e936f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools\endstops">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e946f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools\extruder">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e956f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools\filamentdetector">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e966f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools\laser">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e976f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools\rotarydeltacalibration">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e986f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools\scaracal">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e996f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools\spindle">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9a6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools\switch">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9d6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools\temperaturecontrol">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9e6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools\temperatureswitch">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f719019e9f6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools\toolmanager">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-0719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\tools\zprobe">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-1719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\configurator">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-2719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\currentcontrol">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-3719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\killbutton">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-4719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\motordrivercontrol">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-5719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\panel">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-6719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\player">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-7719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\PlayLed">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-8719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\simpleshell">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-9719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\motordrivercontrol\drivers">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-a719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\motordrivercontrol\drivers\DRV8711">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-b719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\motordrivercontrol\drivers\TMC26X">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-c719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\panel\panels">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-d719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\panel\screens">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-e719019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\panel\panels\rrdglcd">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f019019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\panel\panels\ST7565">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f119019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\panel\screens\3dprinter">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f219019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modules\utils\panel\screens\cnc">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f319019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\testframework\easyunit">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f419019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\testframework\unittests">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f519019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\testframework\unittests\libs">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f619019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\testframework\unittests\tools">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f819019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\testframework\unittests\tools\switch">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-f919019e9b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\testframework\unittests\tools\temperatureswitch">
+      <UniqueIdentifier>{bd400b0a-dce4-482c-9fbc-fa19019e9b6f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\generate-version.bat">
+      <Filter>src</Filter>
+    </None>
+    <None Include="src\makefile">
+      <Filter>src</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\version.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Adc.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\ahbmalloc.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\AppendFileStream.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Config.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\ConfigCache.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\ConfigSource.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\ConfigValue.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\gpio.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\HeapRing.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Hook.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Kernel.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\md5.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\MemoryPool.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Module.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\MRI_Hooks.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Pin.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\platform_memory.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\PublicData.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Pwm.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\SDFAT.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\SlowTicker.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\spi.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\StepperMotor.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\StepTicker.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\StreamOutput.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\utils.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Vector3.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Watchdog.cpp">
+      <Filter>src\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\ADC\adc.cpp">
+      <Filter>src\libs\ADC</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\ChaNFS\FATDirHandle.cpp">
+      <Filter>src\libs\ChaNFS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\ChaNFS\FATFileHandle.cpp">
+      <Filter>src\libs\ChaNFS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\ChaNFS\FATFileSystem.cpp">
+      <Filter>src\libs\ChaNFS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\ChaNFS\CHAN_FS\diskio.cpp">
+      <Filter>src\libs\ChaNFS\CHAN_FS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\ChaNFS\CHAN_FS\ff.cpp">
+      <Filter>src\libs\ChaNFS\CHAN_FS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\ConfigSources\FileConfigSource.cpp">
+      <Filter>src\libs\ConfigSources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\ConfigSources\FirmConfigSource.cpp">
+      <Filter>src\libs\ConfigSources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Network\net_util.cpp">
+      <Filter>src\libs\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Network\Drivers\LPC17XX_Ethernet.cpp">
+      <Filter>src\libs\Network\Drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Network\uip\CallbackStream.cpp">
+      <Filter>src\libs\Network\uip</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Network\uip\CommandQueue.cpp">
+      <Filter>src\libs\Network\uip</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Network\uip\fifo.cpp">
+      <Filter>src\libs\Network\uip</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Network\uip\Network.cpp">
+      <Filter>src\libs\Network\uip</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Network\uip\plan9\plan9.cpp">
+      <Filter>src\libs\Network\uip\plan9</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Network\uip\sftp\sftpd.cpp">
+      <Filter>src\libs\Network\uip\sftp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Network\uip\telnetd\shell.cpp">
+      <Filter>src\libs\Network\uip\telnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\Network\uip\telnetd\telnetd.cpp">
+      <Filter>src\libs\Network\uip\telnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\USBDevice\DFU.cpp">
+      <Filter>src\libs\USBDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\USBDevice\USB.cpp">
+      <Filter>src\libs\USBDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\USBDevice\USBDevice\USBDevice.cpp">
+      <Filter>src\libs\USBDevice\USBDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\USBDevice\USBDevice\USBHAL_LPC11U.cpp">
+      <Filter>src\libs\USBDevice\USBDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\USBDevice\USBDevice\USBHAL_LPC17.cpp">
+      <Filter>src\libs\USBDevice\USBDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\USBDevice\USBMSD\SDCard.cpp">
+      <Filter>src\libs\USBDevice\USBMSD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\USBDevice\USBMSD\USBMSD.cpp">
+      <Filter>src\libs\USBDevice\USBMSD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\USBDevice\USBSerial\USBCDC.cpp">
+      <Filter>src\libs\USBDevice\USBSerial</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libs\USBDevice\USBSerial\USBSerial.cpp">
+      <Filter>src\libs\USBDevice\USBSerial</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\communication\GcodeDispatch.cpp">
+      <Filter>src\modules\communication</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\communication\SerialConsole.cpp">
+      <Filter>src\modules\communication</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\communication\utils\Gcode.cpp">
+      <Filter>src\modules\communication\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\robot\Block.cpp">
+      <Filter>src\modules\robot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\robot\Conveyor.cpp">
+      <Filter>src\modules\robot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\robot\Planner.cpp">
+      <Filter>src\modules\robot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\robot\Robot.cpp">
+      <Filter>src\modules\robot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\robot\arm_solutions\CartesianSolution.cpp">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\robot\arm_solutions\CoreXZSolution.cpp">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\robot\arm_solutions\ExperimentalDeltaSolution.cpp">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\robot\arm_solutions\HBotSolution.cpp">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\robot\arm_solutions\LinearDeltaSolution.cpp">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\robot\arm_solutions\MorganSCARASolution.cpp">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\robot\arm_solutions\RotaryDeltaSolution.cpp">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\robot\arm_solutions\RotatableCartesianSolution.cpp">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\drillingcycles\Drillingcycles.cpp">
+      <Filter>src\modules\tools\drillingcycles</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\endstops\Endstops.cpp">
+      <Filter>src\modules\tools\endstops</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\extruder\Extruder.cpp">
+      <Filter>src\modules\tools\extruder</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\extruder\ExtruderMaker.cpp">
+      <Filter>src\modules\tools\extruder</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\filamentdetector\FilamentDetector.cpp">
+      <Filter>src\modules\tools\filamentdetector</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\laser\Laser.cpp">
+      <Filter>src\modules\tools\laser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\rotarydeltacalibration\RotaryDeltaCalibration.cpp">
+      <Filter>src\modules\tools\rotarydeltacalibration</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\scaracal\SCARAcal.cpp">
+      <Filter>src\modules\tools\scaracal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\spindle\Spindle.cpp">
+      <Filter>src\modules\tools\spindle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\switch\Switch.cpp">
+      <Filter>src\modules\tools\switch</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\switch\SwitchPool.cpp">
+      <Filter>src\modules\tools\switch</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\temperaturecontrol\AD8495.cpp">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\temperaturecontrol\max31855.cpp">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\temperaturecontrol\PID_Autotuner.cpp">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\temperaturecontrol\TemperatureControl.cpp">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\temperaturecontrol\TemperatureControlPool.cpp">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\temperaturecontrol\Thermistor.cpp">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\temperatureswitch\TemperatureSwitch.cpp">
+      <Filter>src\modules\tools\temperatureswitch</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\toolmanager\ToolManager.cpp">
+      <Filter>src\modules\tools\toolmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\zprobe\DeltaCalibrationStrategy.cpp">
+      <Filter>src\modules\tools\zprobe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\zprobe\DeltaGridStrategy.cpp">
+      <Filter>src\modules\tools\zprobe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\zprobe\Plane3D.cpp">
+      <Filter>src\modules\tools\zprobe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\zprobe\ThreePointStrategy.cpp">
+      <Filter>src\modules\tools\zprobe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\zprobe\ZGridStrategy.cpp">
+      <Filter>src\modules\tools\zprobe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\tools\zprobe\ZProbe.cpp">
+      <Filter>src\modules\tools\zprobe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\configurator\Configurator.cpp">
+      <Filter>src\modules\utils\configurator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\currentcontrol\CurrentControl.cpp">
+      <Filter>src\modules\utils\currentcontrol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\killbutton\KillButton.cpp">
+      <Filter>src\modules\utils\killbutton</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\motordrivercontrol\MotorDriverControl.cpp">
+      <Filter>src\modules\utils\motordrivercontrol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\motordrivercontrol\drivers\DRV8711\drv8711.cpp">
+      <Filter>src\modules\utils\motordrivercontrol\drivers\DRV8711</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\motordrivercontrol\drivers\TMC26X\TMC26X.cpp">
+      <Filter>src\modules\utils\motordrivercontrol\drivers\TMC26X</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\Button.cpp">
+      <Filter>src\modules\utils\panel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\Panel.cpp">
+      <Filter>src\modules\utils\panel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\PanelScreen.cpp">
+      <Filter>src\modules\utils\panel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\panels\LcdBase.cpp">
+      <Filter>src\modules\utils\panel\panels</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\panels\ReprapDiscountGLCD.cpp">
+      <Filter>src\modules\utils\panel\panels</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\panels\ST7565.cpp">
+      <Filter>src\modules\utils\panel\panels</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\panels\UniversalAdapter.cpp">
+      <Filter>src\modules\utils\panel\panels</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\panels\rrdglcd\RrdGlcd.cpp">
+      <Filter>src\modules\utils\panel\panels\rrdglcd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\CustomScreen.cpp">
+      <Filter>src\modules\utils\panel\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\FileScreen.cpp">
+      <Filter>src\modules\utils\panel\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\ModifyValuesScreen.cpp">
+      <Filter>src\modules\utils\panel\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\ControlScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\ExtruderScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\JogScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\MainMenuScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\PrepareScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\ProbeScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\3dprinter\WatchScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\ControlScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\DirectJogScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\JogScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\MainMenuScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\PrepareScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\ProbeScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\WatchScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\panel\screens\cnc\WCSScreen.cpp">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\player\Player.cpp">
+      <Filter>src\modules\utils\player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\PlayLed\PlayLed.cpp">
+      <Filter>src\modules\utils\PlayLed</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\utils\simpleshell\SimpleShell.cpp">
+      <Filter>src\modules\utils\simpleshell</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\Test_kernel.cpp">
+      <Filter>src\testframework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\Test_main.cpp">
+      <Filter>src\testframework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\easyunit\defaulttestprinter.cpp">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\easyunit\simplestring.cpp">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\easyunit\test.cpp">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\easyunit\testcase.cpp">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\easyunit\testpartresult.cpp">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\easyunit\testregistry.cpp">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\easyunit\testresult.cpp">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\easyunit\testrunner.cpp">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\unittests\libs\TEST_gcode.cpp">
+      <Filter>src\testframework\unittests\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\unittests\libs\TEST_utils.cpp">
+      <Filter>src\testframework\unittests\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\unittests\tools\switch\TEST_Switch.cpp">
+      <Filter>src\testframework\unittests\tools\switch</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testframework\unittests\tools\temperatureswitch\TEST_TemperatureSwitch.cpp">
+      <Filter>src\testframework\unittests\tools\temperatureswitch</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\version.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Adc.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ahbmalloc.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\AppendFileStream.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\checksumm.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Config.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ConfigCache.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ConfigSource.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ConfigValue.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\FileStream.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\FPointer.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\gpio.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\HeapRing.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Hook.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Kernel.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\md5.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Median.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\MemoryPool.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Module.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\MRI_Hooks.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\nuts_bolts.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Pin.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\platform_memory.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\PublicData.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\PublicDataRequest.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Pwm.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\RingBuffer.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\SDFAT.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\SerialMessage.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\SlowTicker.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\spi.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\spi_hal.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\StepperMotor.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\StepTicker.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\StreamOutput.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\StreamOutputPool.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\StringStream.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\TSRingBuffer.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\utils.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Vector3.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Watchdog.h">
+      <Filter>src\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ADC\adc.h">
+      <Filter>src\libs\ADC</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ChaNFS\FATDirHandle.h">
+      <Filter>src\libs\ChaNFS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ChaNFS\FATFileHandle.h">
+      <Filter>src\libs\ChaNFS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ChaNFS\FATFileSystem.h">
+      <Filter>src\libs\ChaNFS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ChaNFS\CHAN_FS\diskio.h">
+      <Filter>src\libs\ChaNFS\CHAN_FS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ChaNFS\CHAN_FS\ff.h">
+      <Filter>src\libs\ChaNFS\CHAN_FS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ChaNFS\CHAN_FS\ffconf.h">
+      <Filter>src\libs\ChaNFS\CHAN_FS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ChaNFS\CHAN_FS\integer.h">
+      <Filter>src\libs\ChaNFS\CHAN_FS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ConfigSources\FileConfigSource.h">
+      <Filter>src\libs\ConfigSources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\ConfigSources\FirmConfigSource.h">
+      <Filter>src\libs\ConfigSources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\score_cm3.h">
+      <Filter>src\libs\LPC17xx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\sLPC17xx.h">
+      <Filter>src\libs\LPC17xx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\debug_frmwrk.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_adc.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_can.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_clkpwr.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_dac.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_emac.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_exti.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_gpdma.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_gpio.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_i2c.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_i2s.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_libcfg_default.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_mcpwm.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_nvic.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_pinsel.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_pwm.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_qei.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_rit.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_rtc.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_spi.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_ssp.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_systick.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_timer.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_uart.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc17xx_wdt.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\LPC17xx\LPC17xxLib\inc\lpc_types.h">
+      <Filter>src\libs\LPC17xx\LPC17xxLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\net_util.h">
+      <Filter>src\libs\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\Drivers\LPC17XX_Ethernet.h">
+      <Filter>src\libs\Network\Drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\c-fifo.h">
+      <Filter>src\libs\Network\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\CallbackStream.h">
+      <Filter>src\libs\Network\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\clock-arch.h">
+      <Filter>src\libs\Network\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\CommandQueue.h">
+      <Filter>src\libs\Network\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\fifo.h">
+      <Filter>src\libs\Network\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\Network.h">
+      <Filter>src\libs\Network\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\NetworkPublicAccess.h">
+      <Filter>src\libs\Network\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip-conf.h">
+      <Filter>src\libs\Network\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\dhcpc\dhcpc.h">
+      <Filter>src\libs\Network\uip\dhcpc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\lib\memb.h">
+      <Filter>src\libs\Network\uip\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\plan9\plan9.h">
+      <Filter>src\libs\Network\uip\plan9</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\sftp\sftpd.h">
+      <Filter>src\libs\Network\uip\sftp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\telnetd\shell.h">
+      <Filter>src\libs\Network\uip\telnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\telnetd\telnetd.h">
+      <Filter>src\libs\Network\uip\telnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\clock.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\lc-addrlabels.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\lc-switch.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\lc.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\psock.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\pt.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\timer.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\uip-fw.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\uip-neighbor.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\uip-split.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\uip.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\uiplib.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\uipopt.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\uip_arch.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\uip\uip_arp.h">
+      <Filter>src\libs\Network\uip\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\webserver\http-strings.h">
+      <Filter>src\libs\Network\uip\webserver</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\webserver\httpd-fs.h">
+      <Filter>src\libs\Network\uip\webserver</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\webserver\httpd-fsdata.h">
+      <Filter>src\libs\Network\uip\webserver</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\webserver\httpd-fsdata2.h">
+      <Filter>src\libs\Network\uip\webserver</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\webserver\httpd.h">
+      <Filter>src\libs\Network\uip\webserver</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\Network\uip\webserver\webserver.h">
+      <Filter>src\libs\Network\uip\webserver</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\descriptor.h">
+      <Filter>src\libs\USBDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\descriptor_cdc.h">
+      <Filter>src\libs\USBDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\descriptor_msc.h">
+      <Filter>src\libs\USBDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\DFU.h">
+      <Filter>src\libs\USBDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USB.h">
+      <Filter>src\libs\USBDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBDevice\debug.h">
+      <Filter>src\libs\USBDevice\USBDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBDescriptor.h">
+      <Filter>src\libs\USBDevice\USBDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBDevice.h">
+      <Filter>src\libs\USBDevice\USBDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBDevice_Types.h">
+      <Filter>src\libs\USBDevice\USBDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBEndpoints.h">
+      <Filter>src\libs\USBDevice\USBDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBEndpoints_LPC11U.h">
+      <Filter>src\libs\USBDevice\USBDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBEndpoints_LPC17_LPC23.h">
+      <Filter>src\libs\USBDevice\USBDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBDevice\USBHAL.h">
+      <Filter>src\libs\USBDevice\USBDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBMSD\disk.h">
+      <Filter>src\libs\USBDevice\USBMSD</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBMSD\SDCard.h">
+      <Filter>src\libs\USBDevice\USBMSD</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBMSD\USBMSD.h">
+      <Filter>src\libs\USBDevice\USBMSD</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBSerial\CircBuffer.h">
+      <Filter>src\libs\USBDevice\USBSerial</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBSerial\USBCDC.h">
+      <Filter>src\libs\USBDevice\USBSerial</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libs\USBDevice\USBSerial\USBSerial.h">
+      <Filter>src\libs\USBDevice\USBSerial</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\communication\GcodeDispatch.h">
+      <Filter>src\modules\communication</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\communication\SerialConsole.h">
+      <Filter>src\modules\communication</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\communication\utils\Gcode.h">
+      <Filter>src\modules\communication\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\ActuatorCoordinates.h">
+      <Filter>src\modules\robot</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\Block.h">
+      <Filter>src\modules\robot</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\Conveyor.h">
+      <Filter>src\modules\robot</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\Planner.h">
+      <Filter>src\modules\robot</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\Robot.h">
+      <Filter>src\modules\robot</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\arm_solutions\BaseSolution.h">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\arm_solutions\CartesianSolution.h">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\arm_solutions\CoreXZSolution.h">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\arm_solutions\ExperimentalDeltaSolution.h">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\arm_solutions\HBotSolution.h">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\arm_solutions\LinearDeltaSolution.h">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\arm_solutions\MorganSCARASolution.h">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\arm_solutions\RotaryDeltaSolution.h">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\robot\arm_solutions\RotatableCartesianSolution.h">
+      <Filter>src\modules\robot\arm_solutions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\drillingcycles\Drillingcycles.h">
+      <Filter>src\modules\tools\drillingcycles</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\endstops\Endstops.h">
+      <Filter>src\modules\tools\endstops</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\endstops\EndstopsPublicAccess.h">
+      <Filter>src\modules\tools\endstops</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\extruder\Extruder.h">
+      <Filter>src\modules\tools\extruder</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\extruder\ExtruderMaker.h">
+      <Filter>src\modules\tools\extruder</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\extruder\ExtruderPublicAccess.h">
+      <Filter>src\modules\tools\extruder</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\filamentdetector\FilamentDetector.h">
+      <Filter>src\modules\tools\filamentdetector</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\laser\Laser.h">
+      <Filter>src\modules\tools\laser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\rotarydeltacalibration\RotaryDeltaCalibration.h">
+      <Filter>src\modules\tools\rotarydeltacalibration</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\scaracal\SCARAcal.h">
+      <Filter>src\modules\tools\scaracal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\spindle\Spindle.h">
+      <Filter>src\modules\tools\spindle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\switch\Switch.h">
+      <Filter>src\modules\tools\switch</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\switch\SwitchPool.h">
+      <Filter>src\modules\tools\switch</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\switch\SwitchPublicAccess.h">
+      <Filter>src\modules\tools\switch</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\temperaturecontrol\AD8495.h">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\temperaturecontrol\max31855.h">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\temperaturecontrol\PID_Autotuner.h">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\temperaturecontrol\predefined_thermistors.h">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\temperaturecontrol\TemperatureControl.h">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\temperaturecontrol\TemperatureControlPool.h">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\temperaturecontrol\TemperatureControlPublicAccess.h">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\temperaturecontrol\TempSensor.h">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\temperaturecontrol\Thermistor.h">
+      <Filter>src\modules\tools\temperaturecontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\temperatureswitch\TemperatureSwitch.h">
+      <Filter>src\modules\tools\temperatureswitch</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\toolmanager\Tool.h">
+      <Filter>src\modules\tools\toolmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\toolmanager\ToolManager.h">
+      <Filter>src\modules\tools\toolmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\toolmanager\ToolManagerPublicAccess.h">
+      <Filter>src\modules\tools\toolmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\zprobe\DeltaCalibrationStrategy.h">
+      <Filter>src\modules\tools\zprobe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\zprobe\DeltaGridStrategy.h">
+      <Filter>src\modules\tools\zprobe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\zprobe\LevelingStrategy.h">
+      <Filter>src\modules\tools\zprobe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\zprobe\Plane3D.h">
+      <Filter>src\modules\tools\zprobe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\zprobe\ThreePointStrategy.h">
+      <Filter>src\modules\tools\zprobe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\zprobe\ZGridStrategy.h">
+      <Filter>src\modules\tools\zprobe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\tools\zprobe\ZProbe.h">
+      <Filter>src\modules\tools\zprobe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\configurator\Configurator.h">
+      <Filter>src\modules\utils\configurator</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\currentcontrol\ad5206.h">
+      <Filter>src\modules\utils\currentcontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\currentcontrol\CurrentControl.h">
+      <Filter>src\modules\utils\currentcontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\currentcontrol\DigipotBase.h">
+      <Filter>src\modules\utils\currentcontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\currentcontrol\mcp4451.h">
+      <Filter>src\modules\utils\currentcontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\killbutton\KillButton.h">
+      <Filter>src\modules\utils\killbutton</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\motordrivercontrol\MotorDriverControl.h">
+      <Filter>src\modules\utils\motordrivercontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\motordrivercontrol\drivers\DRV8711\drv8711.h">
+      <Filter>src\modules\utils\motordrivercontrol\drivers\DRV8711</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\motordrivercontrol\drivers\TMC26X\TMC26X.h">
+      <Filter>src\modules\utils\motordrivercontrol\drivers\TMC26X</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\Button.h">
+      <Filter>src\modules\utils\panel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\Panel.h">
+      <Filter>src\modules\utils\panel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\PanelScreen.h">
+      <Filter>src\modules\utils\panel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\panels\LcdBase.h">
+      <Filter>src\modules\utils\panel\panels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\panels\ReprapDiscountGLCD.h">
+      <Filter>src\modules\utils\panel\panels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\panels\ST7565.h">
+      <Filter>src\modules\utils\panel\panels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\panels\UniversalAdapter.h">
+      <Filter>src\modules\utils\panel\panels</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\panels\rrdglcd\RrdGlcd.h">
+      <Filter>src\modules\utils\panel\panels\rrdglcd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\panels\ST7565\glcdfont.h">
+      <Filter>src\modules\utils\panel\panels\ST7565</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\CustomScreen.h">
+      <Filter>src\modules\utils\panel\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\FileScreen.h">
+      <Filter>src\modules\utils\panel\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\ModifyValuesScreen.h">
+      <Filter>src\modules\utils\panel\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\ControlScreen.h">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\ExtruderScreen.h">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\JogScreen.h">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\MainMenuScreen.h">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\PrepareScreen.h">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\ProbeScreen.h">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\3dprinter\WatchScreen.h">
+      <Filter>src\modules\utils\panel\screens\3dprinter</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\ControlScreen.h">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\DirectJogScreen.h">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\JogScreen.h">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\MainMenuScreen.h">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\PrepareScreen.h">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\ProbeScreen.h">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\WatchScreen.h">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\panel\screens\cnc\WCSScreen.h">
+      <Filter>src\modules\utils\panel\screens\cnc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\player\Player.h">
+      <Filter>src\modules\utils\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\player\PlayerPublicAccess.h">
+      <Filter>src\modules\utils\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\PlayLed\PlayLed.h">
+      <Filter>src\modules\utils\PlayLed</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\utils\simpleshell\SimpleShell.h">
+      <Filter>src\modules\utils\simpleshell</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testframework\Test_kernel.h">
+      <Filter>src\testframework</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testframework\easyunit\defaulttestprinter.h">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testframework\easyunit\simplestring.h">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testframework\easyunit\test.h">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testframework\easyunit\testcase.h">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testframework\easyunit\testharness.h">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testframework\easyunit\testpartresult.h">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testframework\easyunit\testprinter.h">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testframework\easyunit\testregistry.h">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testframework\easyunit\testresult.h">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testframework\easyunit\testrunner.h">
+      <Filter>src\testframework\easyunit</Filter>
+    </ClInclude>
+    </ItemGroup>
+</Project>
