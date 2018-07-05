@@ -238,11 +238,13 @@ void Player::on_console_line_received( void *argument )
 
     SerialMessage new_message = *static_cast<SerialMessage *>(argument);
 
-    // ignore comments and blank lines and if this is a G code then also ignore it
-    char first_char = new_message.message[0];
-    if(strchr(";( \n\rGMTN", first_char) != NULL) return;
-
     string possible_command = new_message.message;
+
+    // ignore anything that is not lowercase or a letter
+    if(possible_command.empty() || !islower(possible_command[0]) || !isalpha(possible_command[0])) {
+        return;
+    }
+
     string cmd = shift_parameter(possible_command);
 
     //new_message.stream->printf("Received %s\r\n", possible_command.c_str());
@@ -337,12 +339,12 @@ void Player::progress_command( string parameters, StreamOutput *stream )
                 est = (file_size - played_cnt) / bytespersec;
         }
 
-        unsigned int pcnt = (file_size - (file_size - played_cnt)) * 100 / file_size;
+        float pcnt = (((float)file_size - (file_size - played_cnt)) * 100.0F) / file_size;
         // If -b or -B is passed, report in the format used by Marlin and the others.
         if (!sdprinting) {
-            stream->printf("file: %s, %u %% complete, elapsed time: %lu s", this->filename.c_str(), pcnt, this->elapsed_secs);
+            stream->printf("file: %s, %u %% complete, elapsed time: %02lu:%02lu:%02lu", this->filename.c_str(), (unsigned int)roundf(pcnt), this->elapsed_secs / 3600, (this->elapsed_secs % 3600) / 60, this->elapsed_secs % 60);
             if(est > 0) {
-                stream->printf(", est time: %lu s",  est);
+                stream->printf(", est time: %02lu:%02lu:%02lu",  est / 3600, (est % 3600) / 60, est % 60);
             }
             stream->printf("\r\n");
         } else {
@@ -468,7 +470,8 @@ void Player::on_get_public_data(void *argument)
         static struct pad_progress p;
         if(file_size > 0 && playing_file) {
             p.elapsed_secs = this->elapsed_secs;
-            p.percent_complete = (this->file_size - (this->file_size - this->played_cnt)) * 100 / this->file_size;
+            float pcnt = (((float)file_size - (file_size - played_cnt)) * 100.0F) / file_size;
+            p.percent_complete = roundf(pcnt);
             p.filename = this->filename;
             pdr->set_data_ptr(&p);
             pdr->set_taken();

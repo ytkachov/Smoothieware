@@ -39,6 +39,7 @@
 #include "Thermistor.h"
 #include "md5.h"
 #include "utils.h"
+#include "AutoPushPop.h"
 
 #include "system_LPC17xx.h"
 #include "LPC17xx.h"
@@ -57,6 +58,7 @@ extern "C" uint32_t  __end__;
 extern "C" uint32_t  __malloc_free_list;
 extern "C" uint32_t  _sbrk(int size);
 
+
 // command lookup table
 const SimpleShell::ptentry_t SimpleShell::commands_table[] = {
     {"ls",       SimpleShell::ls_command},
@@ -65,6 +67,7 @@ const SimpleShell::ptentry_t SimpleShell::commands_table[] = {
     {"cat",      SimpleShell::cat_command},
     {"rm",       SimpleShell::rm_command},
     {"mv",       SimpleShell::mv_command},
+    {"mkdir",    SimpleShell::mkdir_command},
     {"upload",   SimpleShell::upload_command},
     {"reset",    SimpleShell::reset_command},
     {"dfu",      SimpleShell::dfu_command},
@@ -229,7 +232,7 @@ void SimpleShell::on_console_line_received( void *argument )
                 break;
 
             case 'H':
-                THEKERNEL->call_event(ON_HALT, (void *)1); // clears on_halt
+                if(THEKERNEL->is_halted()) THEKERNEL->call_event(ON_HALT, (void *)1); // clears on_halt
                 if(THEKERNEL->is_grbl_mode()) {
                     // issue G28.2 which is force homing cycle
                     Gcode gcode("G28.2", new_message.stream);
@@ -238,6 +241,7 @@ void SimpleShell::on_console_line_received( void *argument )
                     Gcode gcode("G28", new_message.stream);
                     THEKERNEL->call_event(ON_GCODE_RECEIVED, &gcode);
                 }
+                new_message.stream->printf("ok\n");
                 break;
 
             default:
@@ -262,6 +266,9 @@ void SimpleShell::on_console_line_received( void *argument )
 
         } else if (cmd == "play" || cmd == "progress" || cmd == "abort" || cmd == "suspend" || cmd == "resume") {
             // these are handled by Player module
+
+        } else if (cmd == "fire") {
+            // these are handled by Laser module
 
         } else if (cmd == "ok") {
             // probably an echo so reply ok
@@ -337,6 +344,15 @@ void SimpleShell::mv_command( string parameters, StreamOutput *stream )
     int s = rename(from.c_str(), to.c_str());
     if (s != 0) stream->printf("Could not rename %s to %s\r\n", from.c_str(), to.c_str());
     else stream->printf("renamed %s to %s\r\n", from.c_str(), to.c_str());
+}
+
+// Create a new directory
+void SimpleShell::mkdir_command( string parameters, StreamOutput *stream )
+{
+    string path = absolute_from_relative(shift_parameter( parameters ));
+    int result = mkdir(path.c_str(), 0);
+    if (result != 0) stream->printf("could not create directory %s\r\n", path.c_str());
+    else stream->printf("created directory %s\r\n", path.c_str());
 }
 
 // Change current absolute path to provided path
@@ -471,10 +487,7 @@ void SimpleShell::upload_command( string parameters, StreamOutput *stream )
                 uploading= false;
 
             } else {
-                if ((cnt%400) == 0) {
-                    // HACK ALERT to get around fwrite corruption close and re open for append
-                    fclose(fd);
-                    fd = fopen(upload_filename.c_str(), "a");
+                if ((cnt%1000) == 0) {
                     // we need to kick things or they die
                     THEKERNEL->call_event(ON_IDLE);
                 }
@@ -576,7 +589,7 @@ void SimpleShell::mem_command( string parameters, StreamOutput *stream)
         AHB1.debug(stream);
     }
 
-    stream->printf("Block size: %u bytes\n", sizeof(Block));
+    stream->printf("Block size: %u bytes, Tickinfo size: %u bytes\n", sizeof(Block), sizeof(Block::tickinfo_t) * Block::n_actuators);
 }
 
 static uint32_t getDeviceType()
@@ -620,8 +633,12 @@ void SimpleShell::version_command( string parameters, StreamOutput *stream)
     const char *mcu = (dev & 0x00100000) ? "LPC1769" : "LPC1768";
     stream->printf("Build version: %s, Build date: %s, MCU: %s, System Clock: %ldMHz\r\n", vers.get_build(), vers.get_build_date(), mcu, SystemCoreClock / 1000000);
     #ifdef CNC
-    stream->printf("  CNC Build\r\n");
+    stream->printf("  CNC Build ");
     #endif
+    #ifdef DISABLEMSD
+    stream->printf("  NOMSD Build\r\n");
+    #endif
+    stream->printf("%d axis\n", MAX_ROBOT_ACTUATORS);
 }
 
 // Reset the system
@@ -797,14 +814,14 @@ void SimpleShell::get_command( string parameters, StreamOutput *stream)
         }
 
    } else if (what == "pos") {
-        // convenience to call all the various M114 variants
-        char buf[64];
-        THEROBOT->print_position(0, buf, sizeof buf); stream->printf("last %s\n", buf);
-        THEROBOT->print_position(1, buf, sizeof buf); stream->printf("realtime %s\n", buf);
-        THEROBOT->print_position(2, buf, sizeof buf); stream->printf("%s\n", buf);
-        THEROBOT->print_position(3, buf, sizeof buf); stream->printf("%s\n", buf);
-        THEROBOT->print_position(4, buf, sizeof buf); stream->printf("%s\n", buf);
-        THEROBOT->print_position(5, buf, sizeof buf); stream->printf("%s\n", buf);
+        // convenience to call all the various M114 variants, shows ABC axis where relevant
+        std::string buf;
+        THEROBOT->print_position(0, buf); stream->printf("last %s\n", buf.c_str()); buf.clear();
+        THEROBOT->print_position(1, buf); stream->printf("realtime %s\n", buf.c_str()); buf.clear();
+        THEROBOT->print_position(2, buf); stream->printf("%s\n", buf.c_str()); buf.clear();
+        THEROBOT->print_position(3, buf); stream->printf("%s\n", buf.c_str()); buf.clear();
+        THEROBOT->print_position(4, buf); stream->printf("%s\n", buf.c_str()); buf.clear();
+        THEROBOT->print_position(5, buf); stream->printf("%s\n", buf.c_str()); buf.clear();
 
     } else if (what == "wcs") {
         // print the wcs state
@@ -813,7 +830,7 @@ void SimpleShell::get_command( string parameters, StreamOutput *stream)
     } else if (what == "state") {
         // also $G
         // [G0 G54 G17 G21 G90 G94 M0 M5 M9 T0 F0.]
-        stream->printf("[G%d %s G%d G%d G%d G94 M0 M5 M9 T%d F%1.4f]\n",
+        stream->printf("[G%d %s G%d G%d G%d G94 M0 M5 M9 T%d F%1.4f S%1.4f]\n",
             THEKERNEL->gcode_dispatch->get_modal_command(),
             wcs2gcode(THEROBOT->get_current_wcs()).c_str(),
             THEROBOT->plane_axis_0 == X_AXIS && THEROBOT->plane_axis_1 == Y_AXIS && THEROBOT->plane_axis_2 == Z_AXIS ? 17 :
@@ -822,7 +839,8 @@ void SimpleShell::get_command( string parameters, StreamOutput *stream)
             THEROBOT->inch_mode ? 20 : 21,
             THEROBOT->absolute_mode ? 90 : 91,
             get_active_tool(),
-            THEROBOT->from_millimeters(THEROBOT->get_feed_rate()));
+            THEROBOT->from_millimeters(THEROBOT->get_feed_rate()),
+            THEROBOT->get_s_value());
 
     } else if (what == "status") {
         // also ? on serial and usb
@@ -878,7 +896,8 @@ void SimpleShell::calc_thermistor_command( string parameters, StreamOutput *stre
             stream->printf("  Paste the above in the M305 S0 command, then save with M500\n");
         }else{
             char buf[80];
-            int n = snprintf(buf, sizeof(buf), "M305 S%d I%1.18f J%1.18f K%1.18f", saveto, c1, c2, c3);
+            size_t n = snprintf(buf, sizeof(buf), "M305 S%d I%1.18f J%1.18f K%1.18f", saveto, c1, c2, c3);
+            if(n > sizeof(buf)) n= sizeof(buf);
             string g(buf, n);
             Gcode gcode(g, &(StreamOutput::NullStream));
             THEKERNEL->call_event(ON_GCODE_RECEIVED, &gcode );
@@ -892,23 +911,36 @@ void SimpleShell::calc_thermistor_command( string parameters, StreamOutput *stre
     #endif
 }
 
-// used to test out the get public data events for switch
+// set or get switch state for a named switch
 void SimpleShell::switch_command( string parameters, StreamOutput *stream)
 {
     string type = shift_parameter( parameters );
     string value = shift_parameter( parameters );
     bool ok = false;
-    if(value == "on" || value == "off") {
-        bool b = value == "on";
-        ok = PublicData::set_value( switch_checksum, get_checksum(type), state_checksum, &b );
-    } else {
-        float v = strtof(value.c_str(), NULL);
-        ok = PublicData::set_value( switch_checksum, get_checksum(type), value_checksum, &v );
-    }
-    if (ok) {
-        stream->printf("switch %s set to: %s\r\n", type.c_str(), value.c_str());
-    } else {
-        stream->printf("%s is not a known switch device\r\n", type.c_str());
+    if(value.empty()) {
+        // get switch state
+        struct pad_switch pad;
+        bool ok = PublicData::get_value(switch_checksum, get_checksum(type), 0, &pad);
+        if (!ok) {
+            stream->printf("unknown switch %s.\n", type.c_str());
+            return;
+        }
+        stream->printf("switch %s is %d\n", type.c_str(), pad.state);
+
+    }else{
+        // set switch state
+        if(value == "on" || value == "off") {
+            bool b = value == "on";
+            ok = PublicData::set_value( switch_checksum, get_checksum(type), state_checksum, &b );
+        } else {
+            float v = strtof(value.c_str(), NULL);
+            ok = PublicData::set_value( switch_checksum, get_checksum(type), value_checksum, &v );
+        }
+        if (ok) {
+            stream->printf("switch %s set to: %s\n", type.c_str(), value.c_str());
+        } else {
+            stream->printf("%s is not a known switch device\n", type.c_str());
+        }
     }
 }
 
@@ -937,6 +969,7 @@ void SimpleShell::md5sum_command( string parameters, StreamOutput *stream )
 // runs several types of test on the mechanisms
 void SimpleShell::test_command( string parameters, StreamOutput *stream)
 {
+    AutoPushPop app; // this will save the state and restore it on exit
     string what = shift_parameter( parameters );
 
     if (what == "jog") {
@@ -961,7 +994,6 @@ void SimpleShell::test_command( string parameters, StreamOutput *stream)
             struct SerialMessage message{&StreamOutput::NullStream, cmd};
             THEKERNEL->call_event(ON_CONSOLE_LINE_RECEIVED, &message );
             if(THEKERNEL->is_halted()) break;
-            THECONVEYOR->wait_for_idle();
             toggle= !toggle;
         }
         stream->printf("done\n");
@@ -993,7 +1025,6 @@ void SimpleShell::test_command( string parameters, StreamOutput *stream)
             stream->printf("%s\n", cmd);
             message.message= cmd;
             THEKERNEL->call_event(ON_CONSOLE_LINE_RECEIVED, &message );
-            THECONVEYOR->wait_for_idle();
         }
 
         // leave it where it started
@@ -1004,7 +1035,7 @@ void SimpleShell::test_command( string parameters, StreamOutput *stream)
             THEKERNEL->call_event(ON_CONSOLE_LINE_RECEIVED, &message );
         }
 
-       THEROBOT->pop_state();
+        THEROBOT->pop_state();
         stream->printf("done\n");
 
     }else if (what == "square") {
@@ -1047,8 +1078,7 @@ void SimpleShell::test_command( string parameters, StreamOutput *stream)
                 THEKERNEL->call_event(ON_CONSOLE_LINE_RECEIVED, &message );
             }
             if(THEKERNEL->is_halted()) break;
-            THECONVEYOR->wait_for_idle();
-        }
+         }
         stream->printf("done\n");
 
     }else if (what == "raw") {
@@ -1061,13 +1091,19 @@ void SimpleShell::test_command( string parameters, StreamOutput *stream)
             return;
         }
 
-        uint8_t a= toupper(axis[0]) - 'X';
+        char ax= toupper(axis[0]);
+        uint8_t a= ax >= 'X' ? ax - 'X' : ax - 'A' + 3;
         int steps= strtol(stepstr.c_str(), NULL, 10);
         bool dir= steps >= 0;
         steps= std::abs(steps);
 
-        if(a > Z_AXIS) {
-            stream->printf("error: axis must be x y or z\n");
+        if(a > C_AXIS) {
+            stream->printf("error: axis must be x, y, z, a, b, c\n");
+            return;
+        }
+
+        if(a >= THEROBOT->get_number_registered_motors()) {
+            stream->printf("error: axis is out of range\n");
             return;
         }
 
@@ -1085,7 +1121,7 @@ void SimpleShell::test_command( string parameters, StreamOutput *stream)
         // reset the position based on current actuator position
         THEROBOT->reset_position_from_current_actuator_position();
 
-        stream->printf("done\n");
+        //stream->printf("done\n");
 
     }else {
         stream->printf("usage:\n test jog axis distance iterations [feedrate]\n");
@@ -1118,6 +1154,7 @@ void SimpleShell::help_command( string parameters, StreamOutput *stream )
     stream->printf("get [pos|wcs|state|status|fk|ik]\r\n");
     stream->printf("get temp [bed|hotend]\r\n");
     stream->printf("set_temp bed|hotend 185\r\n");
+    stream->printf("switch name [value]\r\n");
     stream->printf("net\r\n");
     stream->printf("load [file] - loads a configuration override file from soecified name or config-override\r\n");
     stream->printf("save [file] - saves a configuration override file as specified filename or as config-override\r\n");
