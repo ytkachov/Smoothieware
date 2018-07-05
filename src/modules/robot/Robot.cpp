@@ -235,6 +235,15 @@ void Robot::load_config()
             pins[i].from_string(THEKERNEL->config->value(motor_checksums[a][i])->by_default("nc")->as_string())->as_output();
         }
 
+        if(!pins[0].connected() || !pins[1].connected()) { // step and dir must be defined, but enable is optional
+            if(a <= Z_AXIS) {
+                THEKERNEL->streams->printf("FATAL: motor %c is not defined in config\n", 'X'+a);
+                n_motors= a; // we only have this number of motors
+                return;
+            }
+            break; // if any pin is not defined then the axis is not defined (and axis need to be defined in contiguous order)
+        }
+
         StepperMotor *sm;
         if(!THEKERNEL->config->value(motor_checksums[a][6])->by_default(false)->as_bool())
         	sm = new StepperMotor(pins[0], pins[1], pins[2]);

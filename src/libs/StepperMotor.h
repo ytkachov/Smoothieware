@@ -43,8 +43,8 @@ class StepperMotor  : public Module {
         	en_pin.set(!state);
         	if(has_slave) slave_en_pin.set(state);
         };
-        inline bool is_enabled() const { return !en_pin.get(); };
-        inline bool is_moving() const { return moving; };
+        bool is_enabled() const { return !en_pin.get(); };
+        bool is_moving() const { return moving; };
         void start_moving() { moving= true; }
         void stop_moving() { moving= false; }
 
